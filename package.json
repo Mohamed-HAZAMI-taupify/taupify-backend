@@ -41,7 +41,7 @@
     "stripe": "^9.4.0"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "depcheck": "depcheck"
   },
   "repository": {

@@ -46,7 +46,7 @@ const DATE_OPTIONS = {
 const resolvers = {
   Query: {
     coaches: async () => {
-      const coaches = await getAll(Coach, "coaches_key");
+      const coaches = await Coach.find()
       return await coaches;
     },
 
