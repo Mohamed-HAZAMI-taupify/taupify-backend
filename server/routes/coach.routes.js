@@ -16,6 +16,7 @@ const {
   returnInputsRequirementErrors,
 } = require("../controllers/inputs.controller");
 const config = require("../config/config");
+const client_token = "everestsportclubbesancon";
 
 // GET route coaches information
 router.get('/AllCoaches', async (req, res) => {
@@ -31,6 +32,7 @@ router.get('/AllCoaches', async (req, res) => {
   }
 });
 
+
 router.route("/coach-activity").get(async (req, res, next) => {
   const query = url.parse(req.url, true).query;
   const coachFilter = {};
@@ -42,6 +44,8 @@ router.route("/coach-activity").get(async (req, res, next) => {
   }
   return getFiltered(req,Coach, "coaches", coachFilter, 3600);
 });
+
+
 
 router
   .route("/")
